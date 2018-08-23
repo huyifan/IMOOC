@@ -26,10 +26,8 @@ var arrow4 = function arrow4(param) {
   return console.log("params:" + param);
 };
 
-// const arrow5 = param => ({...param})
-
 //id:1 movie:xxx 直接解构对象
-var arrow6 = function arrow6(_ref) {
+var arrow5 = function arrow5(_ref) {
   var id = _ref.id,
       movie = _ref.movie;
   return console.log("id:" + id + "|" + " movie: " + movie);

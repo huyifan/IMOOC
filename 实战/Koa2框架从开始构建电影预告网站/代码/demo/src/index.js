@@ -16,3 +16,13 @@ promisify(readFile)(r(__dirname, '../package.json'))
 
     wfs(r(__dirname, './name'), String(data.name), 'utf8')
   })
+
+const readAsync = promisify(readFile)
+
+async function init() {
+  let data = await readAsync(r(__dirname, '../package.json'))
+  data = JSON.parse(data)
+  console.log("init console:" + data.name)
+}
+
+init()
