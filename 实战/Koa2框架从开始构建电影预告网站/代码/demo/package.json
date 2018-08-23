@@ -4,6 +4,7 @@
   "description": "",
   "main": "testNodeAsync.js",
   "scripts": {
+    "dev": "nodemon -w src  --exec \"babel-node src  --presets env\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,5 +12,10 @@
   "dependencies": {
     "co": "^4.6.0",
     "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.3"
   }
 }
