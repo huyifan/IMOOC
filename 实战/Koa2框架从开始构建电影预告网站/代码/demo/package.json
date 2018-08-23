@@ -5,6 +5,7 @@
   "main": "testNodeAsync.js",
   "scripts": {
     "dev": "nodemon -w src  --exec \"babel-node src  --presets env\"",
+    "build":"babel src -s -D -d dist --presets env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

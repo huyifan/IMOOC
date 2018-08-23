@@ -21,10 +21,8 @@ const arrow3 = (param) => console.log("params:" + param)
 
 const arrow4 = param => console.log("params:" + param)
 
-const arrow5 = param => ({...param})
-
 //id:1 movie:xxx 直接解构对象
-const arrow6 = ({id, movie}) => console.log("id:" + id + "|" + " movie: " + movie)
+const arrow5 = ({id, movie}) => console.log("id:" + id + "|" + " movie: " + movie)
 
 
 testArrow()
