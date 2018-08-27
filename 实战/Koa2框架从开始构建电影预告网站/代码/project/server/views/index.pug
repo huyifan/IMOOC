@@ -4,7 +4,33 @@ block title
     title 豆瓣首页
 
 block content
-    .container
-    .row
-        .col-md-8
-            h1 Hi #{name} ,age is #{age}
+    include ./includes/header
+    .container-fluid(style="margin-top:70px")
+
+        .col-12.col-md-9.col-xl-9.py-md-3.pl-md-5.content
+            .row
+                .col-md-6
+                    .card
+                        img.card-img-top(src='https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2530572643.webp' data-video='http://vt1.doubanio.com/201808271024/566ea1b55d6c573aedd8c25a2d534de2/view/movie/M/402340637.mp4')
+                        .card-body
+                            h4.card-titile 电影标题
+                            p.card-desc 电影描述
+                        .card-footer
+                            small.text-muted 1天前更新
+                .col-md-6
+                    .card
+                        img.card-img-top(src='https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2530572643.webp' data-video='http://vt1.doubanio.com/201808271024/566ea1b55d6c573aedd8c25a2d534de2/view/movie/M/402340637.mp4')
+                        .card-body
+                            h4.card-titile 电影标题
+                            p.card-desc 电影描述
+                        .card-footer
+                            small.text-muted 1天前更新
+
+                .col-md-6
+                    .card
+                        img.card-img-top(src='https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2530572643.webp' data-video='http://vt1.doubanio.com/201808271024/566ea1b55d6c573aedd8c25a2d534de2/view/movie/M/402340637.mp4')
+                        .card-body
+                            h4.card-titile 电影标题
+                            p.card-desc 电影描述
+                        .card-footer
+                            small.text-muted 1天前更新
