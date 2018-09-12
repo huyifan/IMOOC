@@ -5,7 +5,33 @@ script(src='https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js')
 script.
   var player = null
   $(document).ready(function () {
+    $('myModal').on('hidden.bs.modal', function (e) {
+      if (player && player.pause) player.pause()
+    })
+
     $('.card-img-top').click(function (e) {
-      alert('111')
+      var video = $(this).data('video')
+      var image = $(this).attr('src')
+
+      $('#myModal').modal('show')
+
+      var video = 'http://172.20.183.62/static/demo.mp4'
+      if (!player) {
+        player = new DPlayer({
+          container: document.getElementById('videoModal'),
+          screenshot: true,
+          video: {
+            url: video,
+            pic: image,
+            thumbnails: image
+          }
+        })
+      } else {
+        player.switchVideo({
+          url: video,
+          pic: image,
+          type: 'auto'
+        })
+      }
     })
   })

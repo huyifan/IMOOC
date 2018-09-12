@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
+  <title>Rem</title>
+  <style>
+
+    html {
+      font-size: 100px;
+    }
+
+    body {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .box {
+      width: 3rem;
+      height: 4rem;
+      background-color: #6170b1;
+    }
+
+    .text {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <p class="text">
+    hello rem
+  </p>
+</div>
+
+<script>
+  window.onload = function () {
+    /*720代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+     为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+
+    /*
+     * 也就说，在屏幕宽度为720px的情况下，1rem=100px
+     * */
+
+    getRem(720, 100)
+  };
+  window.onresize = function () {
+    getRem(720, 100)
+  };
+
+  function getRem(pwidth, prem) {
+    var html = document.getElementsByTagName("html")[0];
+    var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+    html.style.fontSize = oWidth / pwidth * prem + "px";
+  }
+</script>
+</body>
+</html>

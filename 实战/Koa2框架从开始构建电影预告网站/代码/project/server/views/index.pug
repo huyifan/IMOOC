@@ -5,6 +5,8 @@ block title
 
 block content
     include ./includes/header
+    video
+        source(src='http://172.20.183.62/static/demo.mp4')
     .container-fluid(style="margin-top:70px")
 
         .col-12.col-md-9.col-xl-9.py-md-3.pl-md-5.content
@@ -34,3 +36,6 @@ block content
                             p.card-desc 电影描述
                         .card-footer
                             small.text-muted 1天前更新
+    #myModal.modal.fade.bd-example-modal-lg(tabindex='-1',role='dialog')
+        .modaldialog.modal-lg
+            #videoModal.modal-content
